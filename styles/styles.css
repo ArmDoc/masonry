@@ -1,0 +1,21 @@
+* {
+	margin: 0px;
+	padding: 0px;
+	box-sizing: border-box;
+	list-style: none;
+	text-decoration: none; 
+}
+
+.masonry {
+	position: relative
+}
+
+.masonry .masonry__item {
+	position: absolute;
+}
+
+.masonry .masonry__item .masonry__image {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}

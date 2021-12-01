@@ -1,0 +1,1 @@
+document.querySelectorAll(".masonry__item").forEach()
