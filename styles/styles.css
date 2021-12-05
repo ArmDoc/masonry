@@ -3,19 +3,23 @@
 	padding: 0px;
 	box-sizing: border-box;
 	list-style: none;
-	text-decoration: none; 
+	text-decoration: none;
 }
 
 .masonry {
-	position: relative
+	position: relative;
 }
 
 .masonry .masonry__item {
+	display: block;
 	position: absolute;
+	object-fit: cover;
+	padding: 3px;
+	transition: 0.5s;
 }
 
 .masonry .masonry__item .masonry__image {
 	width: 100%;
 	height: 100%;
-	object-fit: cover;
+	border-radius: 5%;
 }
