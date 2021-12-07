@@ -1,20 +1,20 @@
 function Masonry (className, options) {
 	this.className = className;
 	this.options = options;
-	this.resize();
+	this.render();
 
 	if(this.options.autoResize) {
 		var timer = null;
 		window.addEventListener("resize", () => {
 			clearTimeout(timer);
-			timer = setTimeout(() =>{
-				this.resize();
+			timer = setTimeout(() => {
+				this.render();
 			}, 300);
 		})
 	}
 }
 
-Masonry.prototype.resize = function() {
+Masonry.prototype.render = function() {
 	var columnWidth = this.options.columnWidth;
 	var number = Math.floor(window.innerWidth / columnWidth);
 
@@ -23,7 +23,7 @@ Masonry.prototype.resize = function() {
 		newArr.push(0);
 	}
 
-	document.querySelector(this.className).querySelectorAll(".masonry__item").forEach(function(item) {
+	document.querySelector(this.className).querySelectorAll(".masonry__item").forEach(function (item) {
 		var index = 0;
 		var min = newArr[index];
 		for (var i = 0; i < number; ++i) {
@@ -37,6 +37,7 @@ Masonry.prototype.resize = function() {
 		item.style.left = index * columnWidth + "px";
 		item.style.top = newArr[index] + "px";
 		newArr[index] = newArr[index] + item.clientHeight;
+
 	});
 
 	var max = newArr[0];

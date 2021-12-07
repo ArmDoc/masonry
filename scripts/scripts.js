@@ -3,7 +3,7 @@ var masonryOne = new Masonry ('.masonry--one', {
 	autoResize: true,
 });
 
-var masonryOne = new Masonry ('.masonry--two', {
+var masonryTwo = new Masonry ('.masonry--two', {
 	columnWidth: 300,
 	autoResize: true,
 });
